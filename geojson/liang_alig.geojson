@@ -1,0 +1,8 @@
+var desa= {
+"type": "FeatureCollection",
+"name": "Indo_Desa_region [Selection]",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "DESA": "Liang Alig", "KODE": "", "KECAMATAN": "Krayan", "KABUPATEN": "Nunukan", "PROPINSI": "Kalimantan", "STATUS_IDT": "Non IDT", "STATUS_KOT": "Desa", "STATUS_HUK": "Definitif", "SUMBER_AIR": 2, "IDT_94_95": "Non IDT", "IDT_95_96": "Non IDT", "KLASIFIKAS": "Swakarsa", "TERMASUK_D": "Dataran Tinggi", "LUAS_WILAY": 3107, "SUMBER_PEN": "Pertanian", "SUB_SEKTOR": "Tanaman Pangan", "KEMATIAN_B": 0, "KEMATIAN": 0, "BANYAKNYA_": 0 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 115.73153316, 3.73630203, 0.0 ], [ 115.73169804, 3.74076504, 0.0 ], [ 115.73230788, 3.75000201, 0.0 ], [ 115.732451879999985, 3.76585398, 0.0 ], [ 115.73153604, 3.77850798, 0.0 ], [ 115.730390879999987, 3.78392004, 0.0 ], [ 115.737995879999986, 3.78358299, 0.0 ], [ 115.743465, 3.78286803, 0.0 ], [ 115.74838512, 3.78127296, 0.0 ], [ 115.75358316, 3.77997399, 0.0 ], [ 115.75800216, 3.77969202, 0.0 ], [ 115.758713159999985, 3.77060598, 0.0 ], [ 115.76279016, 3.75775101, 0.0 ], [ 115.766447039999989, 3.74978304, 0.0 ], [ 115.76927592, 3.74064003, 0.0 ], [ 115.769854079999988, 3.73904496, 0.0 ], [ 115.76561292, 3.73823496, 0.0 ], [ 115.753907879999986, 3.73618602, 0.0 ], [ 115.741909079999985, 3.73441698, 0.0 ], [ 115.73210988, 3.73616604, 0.0 ], [ 115.73153316, 3.73630203, 0.0 ] ] ] } }
+]
+}

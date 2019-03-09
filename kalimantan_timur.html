@@ -1,0 +1,141 @@
+<html>
+<header>
+    <title>Kalimantan Timur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="geojson/kalimantan_timur.geojson"></script>
+    <script src="geojson/nunukan.geojson"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+</header>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top bg-dark">
+        <a class="navbar-brand" href="#">SISTEM TERDISTRIBUSI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="kalimantan_timur.html">Kalimantan Timur <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="nunukan.html">Kabupaten Nunukan</a>
+                <a class="nav-item nav-link" href="krayan.html">Kecamatan Krayan</a>
+                <a class="nav-item nav-link" href="liang_alig.html">Desa Liang Alig</a>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="provinsi" style="width: 700px; height: 580px;"></div>
+
+            </div>
+            <div class="col-md-6">
+                <h2>Sejarah Kalimantan Timur</h2>
+                <p>Wilayah Kalimantan Timur dahulu mayoritas adalah hutan hujan tropis. Terdapat beberapa kerajaan yang berada di Kalimantan Timur, diantaranya adalah Kerajaan Kutai (beragama Hindu), Kesultanan Kutai Kartanegara ing Martadipura, dan Kesultanan
+                    Pasir. Wilayah Kalimantan Timur meliputi Paser, Kutai, Berau dan juga Karasikan (Buranun/pra-Kesultanan Sulu) diklaim sebagai wilayah taklukan Maharaja Suryanata, gubernur Majapahit di Negara Dipa (yang berkedudukan di Candi Agung
+                    di Amuntai) hingga tahun 1620 pada masa Kesultanan Banjar. Dengan bala bantuan dari Kerajaan Demak, Kesultanan Banjar terus melebarkan pengaruhnya ke Paser, Kutai, dan Berau. Perjanjian yang ditanda tangani antara Pieter Pietarsz (utusan
+                    VOC) dengan Raja Kutai Kartanegara dalam tahun 1635 memuat antara lain bahwa perdagangan bebas hanya dibolehkan antara Kerajaan Kutai dengan orang-orang Banjar dan Belanda saja. Kedatangan orang Banjar membantu memperluas pengaruh
+                    kekuasaan Kesultanan Kutai terhadap masyarakat Dayak di pedalaman.[3][4] Semenjak itulah pedagang-pedagang asal Banjar mulai mendominasi sebelum kedatangan migrasi orang Bugis pada tahun 1638-1654 dan jatuhnya Makasar ke tangan Belanda
+                    tahun 1667. Antara tahun 1620-1624, negeri-negeri di Kaltim sempat menjadi daerah pengaruh Sultan Alauddin dari Kesultanan Makassar, sebelum adanya perjanjian Bungaya.[5] Menurut Hikayat Banjar Sultan Makassar pernah meminjam tanah
+                    untuk tempat berdagang meliputi wilayah timur dan tenggara Kalimantan kepada Sultan Mustain Billah dari Banjar sewaktu Kiai Martasura diutus ke Makassar dan mengadakan perjanjian dengan Sultan Tallo I Mangngadaccinna Daeng I Ba’le’
+                    Sultan Mahmud Karaeng Pattingalloang[6], yang menjadi mangkubumi dan penasihat utama bagi Sultan Muhammad Said, Raja Gowa tahun 1638-1654 dan juga mertua Sultan Hasanuddin[7][8][9] yang akan menjadikan wilayah Kalimantan Timur sebagai
+                    tempat berdagang bagi Kesultanan Makassar (Gowa-Tallo)[6] sejak itulah mulai berdatanganlah etnis asal Sulawesi Selatan. Namun berdasarkan Perjanjian Kesultanan Banjar dengan VOC pada tahun 1635, VOC membantu Banjar mengembalikan negeri-negeri
+                    di Kaltim menjadi wilayah pengaruh Kesultanan Banjar. Hal tersebut diwujudkan dalam perjanjian Bungaya, bahwa Kesultanan Makassar dilarang berdagang hingga ke timur dan utara Kalimantan. Sesuai traktat 1 Januari 1817, Sultan Sulaiman
+                    dari Banjar menyerahkan Kalimantan Timur, Kalimatan Tengah, sebagian Kalimantan Barat dan sebagian Kalimantan Selatan (termasuk Banjarmasin) kepada Hindia Belanda. CONTRACT MET DEN SULTAN VAN BANDJERMASIN 4 Mei 1826. / B 29 September
+                    1826 No. 10, Sultan Adam al-Watsiq Billah dari Banjar menegaskan kembali penyerahan wilayah Kalimantan Timur, Kalimantan Tengah, sebagian Kalimantan Barat dan sebagian Kalimantan Selatan kepada pemerintahan kolonial Hindia Belanda.[10][11]
+                    Pada tahun 1846, Belanda mulai menempatkan Asisten Residen di Samarinda untuk wilayah Borneo Timur (sekarang provinsi Kalimantan Timur dan bagian timur Kalimantan Selatan) bernama H. Von Dewall.[12] Kaltim merupakan bagian dari Hindia
+                    Belanda.[13] Kaltim 1800-1850.[14] Dalam tahun 1879, Kaltim dan Tawau merupakan Ooster Afdeeling van Borneo bagian dari Residentie Zuider en Oosterafdeeling van Borneo.[15] Dalam tahun 1900, Kaltim merupakan zelfbesturen (wilayah dependensi)[16]
+                    Dalam tahun 1902, Kaltim merupakan Afdeeling Koetei en Noord-oost Kust van Borneo.[17][18] Tahun 1942 Kaltim merupakan Afdeeling Samarinda dan Afdeeling Boeloengan en Beraoe.[19]Ketika Indonesia memproklamasikan kemerdekaannya pada
+                    tanggal 17 Agustus 1945, Indonesia memiliki 8 provinsi, yaitu: Sumatera, Borneo (Kalimantan), Jawa Barat, Jawa Tengah, Jawa Timur, Sulawesi, Maluku, dan Sunda Kecil. Pada masa pergerakan kemerdekaan (1945-1949), Indonesia mengalami
+                    perubahan wilayah akibat kembalinya Belanda untuk menguasai Indonesia, dan sejumlah "negara-negara boneka" dibentuk Belanda dalam wilayah negara Indonesia. Wilayah Kalimantan Timur baru bergabung ke dalam Negara Republik Indonesia
+                    secara resmi pada 10 April 1950. Sebelumnya, pada awal 1950 rakyat Kaltim dalam wadah koalisi Front Nasional yang dipimpin Abdoel Moeis Hassan (bukan Inche Abdoel Moies) menuntut penghapusan swapraja-swapraja alias empat Kesultanan
+                    yang ada di Kaltim serta menuntut agar Federasi Kaltim bergabung ke RI. Kala itu, Federasi Kaltim warisan Van Mook berada dalam kedaulatan Negara Republik Indonesia Serikat (RIS), bukan RI. Pemerintahan Federasi Kaltim merupakan gabungan
+                    Kesultanan Kutai, Sambaliung, Gunung Tabur, Bulungan, plus neoswapraja Pasir. Tuntutan Front Nasional dipenuhi pemerintah lokal dan pusat. Berturut-turut: Februari, 10 Maret, dan 16 Maret; Dewan Kaltim, Federasi Kaltim, dan Residen
+                    Kaltim meminta Pemerintah RIS mewujudkan tuntutan rakyat Kaltim. 19 Maret Pemerintah RI setuju. 24 Maret Presiden RIS juga setuju. Penggabungan Kaltim ke wilayah RI dilakukan dalam upacara serah-terima dari Pemerintah RIS kepada Pemerintah
+                    RI. RIS diwakili Aji Raden Afloes (Plt. Residen Kaltim). Adapun RI diwakili Dr. Moerdjani (Gubernur Kalimantan). Bertindak sebagai saksi, Menteri Dalam Negeri Mr. Soesanto Tirtoprodjo. Penggabungan Kaltim ke RI tercatat dalam sejarah
+                    sebagai daerah pertama di luar Jawa dan Sumatra usai Konferensi Meja Bundar (KMB) yang menggabungkan diri ke wilayah RI. Status wilayah kaltim pada awal bergabung ke RI hingga 6,5 tahun kemudian adalah keresidenan di bawah Provinsi
+                    Kalimantan yang beribu kota di Banjarmasin.[20] <strong>Sumber : wikipedia.org
+                    </strong> </p>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">©jeryhardianto - 2019</a>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100009627699377" class="fab fa-facebook-square"></a>
+                &nbsp;
+                <a href="https://www.youtube.com/channel/UCZ8JVjhURTXix_BT4q8dnpg" class="fab fa-youtube"></a>
+                &nbsp;
+                <a href="https://www.instagram.com/jeryhardianto_/?hl=id" class="fab fa-instagram"></a>
+                &nbsp;
+                <a href="jeryhardianto19220005.000webhostapp.com" class="fas fa-globe"></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+<script>
+    // Membuat data peta 
+    var dataprovinsi = {
+            center: [1.712762, 116.552668],
+            zoom: 7
+        }
+        // Membuat objek peta 
+    var map = new L.map('provinsi', dataprovinsi);
+    map.on('click', function(e) {
+        alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+    });
+    // Membuat layer 
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // Menambahkan layer ke peta 
+    map.addLayer(layer);
+    var kabupatenStyle = {
+        "color": "#ff0000",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    L.geoJson(provinsi).addTo(map);
+    L.geoJson(kabupaten, kabupatenStyle).addTo(map);
+    var markerOptions = {
+            title: "Kabupaten Nunukan",
+            clickable: true,
+            draggable: true
+        }
+        // Creating a marker 
+    var marker = L.marker([4.063765, 116.873856], markerOptions);
+    marker.on('click', function(e) {
+        window.location = "nunukan.html";
+    });
+
+    // Adding marker to the map 
+    marker.addTo(map);
+</script>
+
+</html>

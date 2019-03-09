@@ -1,0 +1,122 @@
+<html>
+<header>
+    <title>Kabupaten Nunukan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="geojson/nunukan.geojson"></script>
+    <script src="geojson/krayan.geojson"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+</header>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top bg-dark">
+        <a class="navbar-brand" href="#">SISTEM TERDISTRIBUSI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="kalimantan_timur.html">Kalimantan Timur</a>
+                <a class="nav-item nav-link  active" href="nunukan.html">Kabupaten Nunukan <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="krayan.html">Kecamatan Krayan</a>
+                <a class="nav-item nav-link" href="liang_alig.html">Desa Liang Alig</a>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="kabupaten" style="width: 700px; height: 580px;"></div>
+
+            </div>
+            <div class="col-md-6">
+                <h2>Sejarah Kabupaten Nunukan</h2>
+                <p>Kabupaten Nunukan merupakan wilayah pemekaran dari Kabupaten Bulungan, Kalimantan Utara. Pembentukan kabupaten ini berdasarkan pertimbangan luas wilyah, peningkatan pembangunan, dan peningkatan pelayanan kepada masyarakat. Pemekaran Kabupaten
+                    Bulungan di pelopori oleh R.A. Besing yang pada saat itu menjabat sebagai bupati. Pada tahun 1999, pemerintah pusat memberlakukan otonomi daerah dengan didasari Undang-undang Nomor 22 tahun 1999 tentang Pemerintahan Daerah. Dengan
+                    dasar inilah dilakukan pemekaran pada Kabupaten Bulungan menjadi 2 kabupaten baru lainnya, yaitu Kabupaten Nunukan dan Kabupaten Malinau. Pemekaran Kabupaten ini secara hukum diatur dalam UU Nomor 47 Tahun 1999 tentang Pembentukan
+                    Kabupaten Nunukan, Kabupaten Malinau, Kabupaten Kutai Timur, Kabupaten Kutai Barat dan Kota Bontang pada tanggal 4 Oktober 1999. Dengan dasar UU Nomor 47 tahun 1999 tersebut Nunukan resmi menjadi kabupaten dengan 5 wilayah administratif,
+                    yakni: Kecamatan Lumbis Kecamatan Sembakung Kecamatan Nunukan Kecamatan Sebatik Kecamatan Krayan Pada tahun 2003 terjadi tragedi kemanusiaan besar-besaran di Nunukan ketika para pekerja gelap asal Indonesia yang bekerja di Malaysia
+                    dideportasi kembali ke Indonesia lewat Nunukan. Sejak tahun 2012, kabupaten ini merupakan bagian dari Provinsi Kalimantan Utara, seiring dengan pemekaran provinsi baru tersebut dari Provinsi Kalimantan Timur. <strong>Sumber : wikipedia.org
+                    </strong> </p>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">©jeryhardianto - 2019</a>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100009627699377" class="fab fa-facebook-square"></a>
+                &nbsp;
+                <a href="https://www.youtube.com/channel/UCZ8JVjhURTXix_BT4q8dnpg" class="fab fa-youtube"></a>
+                &nbsp;
+                <a href="https://www.instagram.com/jeryhardianto_/?hl=id" class="fab fa-instagram"></a>
+                &nbsp;
+                <a href="jeryhardianto19220005.000webhostapp.com" class="fas fa-globe"></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+<script>
+    // Membuat data peta 
+    var datakabupaten = {
+            center: [3.908826, 115.696412],
+            zoom: 8
+        }
+        // Membuat objek peta 
+    var map = new L.map('kabupaten', datakabupaten);
+    map.on('click', function(e) {
+        alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+    });
+    // Membuat layer 
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // Menambahkan layer ke peta 
+    map.addLayer(layer);
+    var kecamatanStyle = {
+        "color": "#0e01fe",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    L.geoJson(kabupaten).addTo(map);
+    L.geoJson(kecamatan, kecamatanStyle).addTo(map);
+    var markerOptions = {
+            title: "Kecamatan Krayan",
+            clickable: true,
+            draggable: true
+        }
+        // Creating a marker 
+    var marker = L.marker([4.063897, 115.776018], markerOptions);
+    marker.on('click', function(e) {
+        window.location = "krayan.html";
+    });
+    // Adding marker to the map 
+    marker.addTo(map);
+</script>
+
+</html>
